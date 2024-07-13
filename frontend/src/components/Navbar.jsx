@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-// import {
-//   Select,
-//   SelectContent,
-//   SelectItem,
-//   SelectTrigger,
-//   SelectValue,
-// } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "shadcn/ui";
 import { ThemeContext } from "../ThemeContext";
 import themes from "../constants/theme";
 
@@ -27,7 +27,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="flex items-center">
-        {/* <Select>
+        <Select>
           <SelectTrigger
             className={`${currentTheme.accent} hover:${currentTheme.primary} font-medium px-2 py-1 rounded-md`}
           >
@@ -45,7 +45,7 @@ const Navbar = () => {
               </SelectItem>
             ))}
           </SelectContent>
-        </Select> */}
+        </Select>
         <Link
           to="/users"
           className={`${currentTheme.accent} hover:${currentTheme.primary} font-medium px-2 py-1 rounded-md ml-4`}
