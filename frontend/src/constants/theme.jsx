@@ -28,6 +28,20 @@ const themes = {
     secondary: "bg-orange-700 text-orange-300",
     accent: "text-orange-400",
   },
+  purple: {
+    background: "bg-purple-900",
+    foreground: "text-purple-200",
+    primary: "bg-purple-500 text-white",
+    secondary: "bg-purple-700 text-purple-300",
+    accent: "text-purple-400",
+  },
+  blue: {
+    background: "bg-blue-900",
+    foreground: "text-blue-200",
+    primary: "bg-blue-500 text-white",
+    secondary: "bg-blue-700 text-blue-300",
+    accent: "text-blue-400",
+  },
 };
 
 export default themes;
