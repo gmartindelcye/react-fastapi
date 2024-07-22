@@ -1,7 +1,10 @@
-import { useState } from "react";
 import PropTypes from "prop-types";
+import { useState, useContext } from "react";
+import { ThemeContext } from "../ThemeContext";
 
 const UserForm = ({ onSubmit }) => {
+  const { theme, themes } = useContext(ThemeContext);
+  const currentTheme = themes[theme];
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -13,13 +16,18 @@ const UserForm = ({ onSubmit }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-      <h2 className="text-2xl font-bold mb-4">Create User</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-4">
+    <div
+      className={`rounded-lg shadow-lg p-6 mb-8 items-center ${currentTheme.boxColor}`}
+    >
+      <h2 className="text-2xl font-bold mb-4 text-center">Create User</h2>
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col space-y-4"
+      >
+        <div>
           <label
             htmlFor="username"
-            className="block font-medium text-gray-700 mb-2"
+            className={`block font-medium ${currentTheme.accent} mb-2`}
           >
             Username
           </label>
@@ -28,13 +36,13 @@ const UserForm = ({ onSubmit }) => {
             id="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            className="bg-gray-200 border border-gray-400 rounded-md py-2 px-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-800"
+            className={`w-full rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${currentTheme.secondary}`}
           />
         </div>
-        <div className="mb-4">
+        <div>
           <label
             htmlFor="password"
-            className="block font-medium text-gray-700 mb-2"
+            className={`block font-medium ${currentTheme.accent} mb-2`}
           >
             Password
           </label>
@@ -43,12 +51,12 @@ const UserForm = ({ onSubmit }) => {
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="bg-gray-200 border border-gray-400 rounded-md py-2 px-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-800"
+            className={`w-full rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${currentTheme.secondary}`}
           />
         </div>
         <button
           type="submit"
-          className="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-md"
+          className={`${currentTheme.success.background} ${currentTheme.success.foreground} font-medium py-2 px-4 rounded-lg w-full`}
         >
           Create User
         </button>

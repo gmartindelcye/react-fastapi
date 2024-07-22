@@ -7,7 +7,7 @@ import UsersPage from "./pages/Users";
 const App = () => {
   return (
     <ThemeProvider>
-      <Router>
+      <Router className="cursor-default">
         <Navbar />
         <Routes>
           <Route

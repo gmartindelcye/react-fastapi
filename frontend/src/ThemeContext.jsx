@@ -5,7 +5,7 @@ import themes from "./constants/theme";
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState("green");
+  const [theme, setTheme] = useState("dark");
 
   const toggleTheme = (newTheme) => {
     setTheme(newTheme);

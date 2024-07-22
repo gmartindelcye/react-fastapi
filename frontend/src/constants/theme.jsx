@@ -1,46 +1,107 @@
-// theme.js
 const themes = {
   light: {
+    name: "Light",
     background: "bg-white",
-    foreground: "text-gray-800",
-    primary: "bg-blue-500 text-white",
-    secondary: "bg-gray-200 text-gray-700",
+    foreground: "text-slate-800",
+    primary: "text-blue-600",
+    secondary: "text-slate-600",
     accent: "text-blue-500",
+    boxColor: "bg-slate-100",
+    border: "border-slate-300",
+    success: {
+      background: "bg-green-500",
+      foreground: "text-white",
+    },
+    warning: {
+      background: "bg-yellow-500",
+      foreground: "text-slate-800",
+    },
+    danger: {
+      background: "bg-red-500",
+      foreground: "text-white",
+    },
+    info: {
+      background: "bg-cyan-500",
+      foreground: "text-white",
+    },
   },
   dark: {
-    background: "bg-gray-900",
-    foreground: "text-gray-200",
-    primary: "bg-blue-700 text-white",
-    secondary: "bg-gray-700 text-gray-300",
-    accent: "text-blue-400",
+    name: "Dark",
+    background: "bg-slate-900",
+    foreground: "text-slate-200",
+    primary: "text-blue-400",
+    secondary: "text-slate-400",
+    accent: "text-blue-300",
+    boxColor: "bg-slate-800",
+    border: "border-slate-700",
+    success: {
+      background: "bg-green-500",
+      foreground: "text-white",
+    },
+    warning: {
+      background: "bg-yellow-500",
+      foreground: "text-slate-800",
+    },
+    danger: {
+      background: "bg-red-500",
+      foreground: "text-white",
+    },
+    info: {
+      background: "bg-cyan-500",
+      foreground: "text-white",
+    },
   },
-  green: {
-    background: "bg-green-900",
-    foreground: "text-green-200",
-    primary: "bg-green-500 text-white",
-    secondary: "bg-green-700 text-green-300",
-    accent: "text-green-400",
-  },
-  orange: {
-    background: "bg-orange-900",
-    foreground: "text-orange-200",
-    primary: "bg-orange-500 text-white",
-    secondary: "bg-orange-700 text-orange-300",
-    accent: "text-orange-400",
-  },
-  purple: {
-    background: "bg-purple-900",
-    foreground: "text-purple-200",
-    primary: "bg-purple-500 text-white",
-    secondary: "bg-purple-700 text-purple-300",
-    accent: "text-purple-400",
-  },
-  blue: {
+  ocean: {
+    name: "Ocean",
     background: "bg-blue-900",
     foreground: "text-blue-200",
-    primary: "bg-blue-500 text-white",
-    secondary: "bg-blue-700 text-blue-300",
-    accent: "text-blue-400",
+    primary: "text-blue-400",
+    secondary: "text-blue-300",
+    accent: "text-blue-500",
+    boxColor: "bg-blue-800",
+    border: "border-blue-700",
+    success: {
+      background: "bg-green-500",
+      foreground: "text-white",
+    },
+    warning: {
+      background: "bg-yellow-500",
+      foreground: "text-slate-800",
+    },
+    danger: {
+      background: "bg-red-500",
+      foreground: "text-white",
+    },
+    info: {
+      background: "bg-cyan-500",
+      foreground: "text-white",
+    },
+  },
+  forest: {
+    name: "Forest",
+    background: "bg-green-900",
+    foreground: "text-green-200",
+    primary: "text-green-400",
+    secondary: "text-green-300",
+    accent: "text-green-500",
+    boxColor: "bg-green-800",
+    border: "border-green-700",
+    success: {
+      background: "bg-green-500",
+      foreground: "text-white",
+    },
+    warning: {
+      background: "bg-yellow-500",
+      foreground: "text-slate-800",
+    },
+    danger: {
+      background: "bg-red-500",
+      foreground: "text-white",
+    },
+    info: {
+      background: "bg-cyan-500",
+      foreground: "text-white",
+    },
   },
 };
 

@@ -47,9 +47,15 @@ const UsersPage = () => {
 
   return (
     <div
-      className={`${currentTheme.background} min-h-screen w-full ${currentTheme.foreground} p-8`}
+      className={`${currentTheme.background} min-h-screen w-full ${currentTheme.foreground} p-8 flex flex-col items-center`}
     >
-      <UserForm onSubmit={handleCreateUser} />
+      <div className="flex justify-center w-full mb-8">
+        <div className="w-full max-w-md">
+          {" "}
+          {/* Set max width for form */}
+          <UserForm onSubmit={handleCreateUser} />
+        </div>
+      </div>
       <h1 className="text-4xl font-bold mb-4">Users</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {users.map((user) => (

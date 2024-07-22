@@ -1,17 +1,24 @@
 import PropTypes from "prop-types";
+import { useContext } from "react";
+import { ThemeContext } from "../ThemeContext";
 
 const UserCard = ({ user, onDelete }) => {
+  const { theme, themes } = useContext(ThemeContext);
+  const currentTheme = themes[theme];
+
   return (
-    <div className="bg-purple-400 rounded-lg p-4 flex flex-col justify-between items-start">
+    <div className={`${currentTheme.boxColor} rounded-lg shadow-lg p-6 mb-8`}>
       <div>
         <h2 className="text-lg font-bold">{user.username}</h2>
-        <p className="w-[55%] text-sm text-gray-200 mt-2 overflow-hidden overflow-ellipsis whitespace-pre-wrap">
+        <p
+          className={`w-[55%] text-sm ${currentTheme.secondary} mt-2 overflow-hidden overflow-ellipsis whitespace-pre-wrap`}
+        >
           {user.password}
         </p>
       </div>
       <button
         onClick={() => onDelete(user.id)}
-        className="bg-red-500 hover:bg-red-600 text-white rounded-full px-3 py-2 transition-colors duration-300 mt-4 self-end"
+        className={`${currentTheme.danger.background} ${currentTheme.danger.foreground} rounded-lg px-3 py-2 transition-colors duration-300 mt-4 self-end`}
       >
         Delete
       </button>
